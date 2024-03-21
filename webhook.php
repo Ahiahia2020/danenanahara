@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $contentType = "application/json"; // Assuming JSON payload, adjust as needed
 
         // Check if the request comes from GitHub by validating the secret
-        $secret = "your_webhook_secret"; // Replace with your webhook secret
+        $secret = "daneaensland./"; // Replace with your webhook secret
         $headers = getallheaders();
         $signature = $headers['X-Hub-Signature'] ?? '';
         $expectedSignature = 'sha1=' . hash_hmac('sha1', $postData, $secret);
